@@ -1,0 +1,20 @@
+@use './variables.scss' as *;
+
+.navwrapper {
+    background-color: $brand-color;
+    nav {
+        display: flex;
+        justify-content: space-around;
+    }
+    a {
+        color: white;
+        font-size: 1.3em;
+        text-decoration: none;
+        font-weight: bold;
+    }
+   
+    a:hover {
+        background-color: #6bc79c;
+        color: white;
+    }
+}

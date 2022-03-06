@@ -1,0 +1,32 @@
+@use './variables.scss' as *;
+
+.aboutMePage{
+    .aboutHeader{
+        text-align: center;
+        position: relative;
+        margin: 30px;
+        color: $brand-color;
+        h1{
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+    }
+    .pdfTag{
+        position: relative;
+        margin: auto;
+        width: 600px;
+        z-index: 0;
+    }
+    .buttonTag{
+        position: absolute;
+        top: -85px;
+        right: 5px;
+        z-index: 1;
+        color: $brand-color;
+        button{
+            // color: $brand-color
+        }
+    }
+    
+    
+}

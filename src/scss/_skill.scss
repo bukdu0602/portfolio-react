@@ -1,0 +1,40 @@
+@use './variables.scss' as *;
+
+
+.languagesWrapper {
+    margin: 0 auto;
+    display: block;
+    max-width: 500px;
+    line-height: 2;
+    .languageTitle{
+        font-size: 3em;
+        color: $brand-color;
+        margin: 20px;
+    }
+    span{
+        color: rgb(85, 134, 125);
+    }
+    h3{
+        font-weight: bold;
+    }
+    // .languageCard:hover{
+    //     transform: scale(1.1);
+    // }
+   .languageCard{
+    // transition: transform .2s;
+    font-size: 1.3em;
+    color: $brand-color;
+    margin: 20px;
+    // border: solid 1px pink;
+    padding: 10px;
+   }
+   .stars{
+       color: gold;
+   }
+   .iconsAndStars {
+       display: flex;
+   }
+   .starsDiv {
+       padding-left: 20px;
+   }
+}

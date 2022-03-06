@@ -1,0 +1,31 @@
+@use './variables.scss' as *;
+
+.contactPage{
+    min-width: 400px;
+    min-height: 400px;
+    text-align: center;
+    color: $brand-color;
+    h1{
+        margin: 30px;
+        font-weight: 500;
+    }
+    h3{
+        margin: 20px;
+        
+    }
+    p{
+        margin-top: 30px;
+
+    }
+    .contactMeIcons {
+        color: $brand-color;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 50px;
+        display: inline-block;
+    }
+    .ftIcon{
+        margin: 0 5px;
+    }
+    
+}
