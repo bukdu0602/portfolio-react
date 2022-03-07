@@ -1,1 +1,39 @@
 @use './variables.scss' as *;
+
+.projectsWrapper{
+    h1{
+        text-align: center;
+        color: $brand-color;
+        font-weight: 600;
+        margin: 30px;
+    }
+    .projectEntire{
+        max-width: 600px;
+        margin: auto;
+        
+        .projectCards{
+            padding: 20px;
+            margin: 20px auto;
+           
+        }
+        .projectBoard{
+            // display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 2000px;
+            
+            p{
+                display: inline;
+                background-color: $brand-color;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                
+            }
+        } 
+    }
+    
+
+}
