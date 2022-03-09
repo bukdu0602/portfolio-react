@@ -1,7 +1,7 @@
 // import backgroundIMG from "./images/header-image.jpeg";
 import { Link } from "react-router-dom";
 import resume from "./resume/resume.pdf";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import waterfall from "./images/waterfall.mp4";
 
 function Header() {

@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import LeftPane from "./LeftPane";
 import Header from "./Header";
 import Skill from "./Skill";
+import ProjectDetail from "./ProjectDetail";
 import "./scss/styles.scss";
 import resume from "./resume/resume.pdf";
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/About" element={<About pdf={resume} />} />
             <Route path="/Contact" element={<Contact />} />
+            <Route path="/projectdetail" element={<ProjectDetail />} />
           </Routes>
         </div>
         <Footer className="footer" />

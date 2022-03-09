@@ -1,5 +1,5 @@
-import { getMouseEventOptions } from "@testing-library/user-event/dist/utils";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 let projects = [
   {
@@ -14,6 +14,7 @@ let projects = [
       "Html",
       "Javascript",
       "CSS",
+      "MongoDB",
       "NodeJS",
       "Express",
       "Passport",
@@ -72,7 +73,7 @@ function Projects() {
   }
   return (
     <div className="projectsWrapper">
-      <h1>Projects</h1>
+      {/* <h1>Projects</h1> */}
 
       <div className="projectEntire">
         <div className="CardsDiv">
@@ -81,15 +82,36 @@ function Projects() {
               className="projectCards"
               key={item.id}
               onMouseEnter={() => mouseOn(item.id)}
-              // onMouseEnter={() => setMouseOver(item.id)}
               onMouseLeave={() => setMouseOver("")}
             >
               <h3>{item.title}</h3>
-              {item.websiteURL && <button>Go To the App!!</button>}
-              <img
-                src={require(`./images/projects/${item.imgName}0.png`)}
-                alt=""
-              />
+              {item.websiteURL && (
+                <button type="button" className="btn btn-outline-success">
+                  Go To the App!!
+                </button>
+              )}
+              <Link
+                type="button"
+                className="btn btn-outline-success"
+                to="/projectdetail"
+                state={item}
+              >
+                Detail Page
+              </Link>
+              <div className="prjImgDiv">
+                <img
+                  src={require(`./images/projects/${item.imgName}0.png`)}
+                  alt=""
+                />
+                {mouseOver && (
+                  <div className="projectBoard">
+                    <h4>Technologies:</h4>
+                    {mouseOver.map((item) => (
+                      <p key={item}>{item} </p>
+                    ))}
+                  </div>
+                )}
+              </div>
               <p>
                 Date Created: {item.dateCreated} <br />
                 Description: {item.description}
@@ -97,13 +119,6 @@ function Projects() {
             </div>
           ))}
         </div>
-        {mouseOver && (
-          <div className="projectBoard">
-            {mouseOver.map((item) => (
-              <p>{item} </p>
-            ))}
-          </div>
-        )}
       </div>
     </div>
   );
