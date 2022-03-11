@@ -1,0 +1,71 @@
+@use './variables.scss' as *;
+
+
+.projectDetail{
+    max-width: 800px;
+    padding: 30px;
+    margin: auto;
+    h1{
+        text-align: center;
+        color: $brand-color;
+        font-weight: 600;
+        margin: 30px;
+    }
+    a{
+        margin: 5px;
+        color: $brand-color;
+        background-color: white;
+   }
+   a:hover{
+    opacity: 0.7;
+   }
+    .detailPageText{
+        margin: 5px;
+        line-height: 2;
+        color: $brand-color;
+        font-weight: 600;
+    }
+    .langDiv{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        border-radius: 5px;
+        padding-top: 15px;
+        margin: 20px 5px;
+        animation: flicker 1s ease-in-out infinite alternate;
+        color: #fff;
+        background-color: $brand-color;
+    }
+    @keyframes flicker {
+    
+        0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      
+            text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #0fa,
+            0 0 80px #0fa,
+            0 0 90px #0fa,
+            0 0 100px #0fa,
+            0 0 150px #0fa;
+        
+        }
+        
+        20%, 24%, 55% {        
+            text-shadow: none;
+        }    
+      }
+    // .techStack{
+    //     text-shadow: 5px 5px 10px;
+    //     font-weight: 600;
+    //     color: rgb(207, 191, 98);
+    // }
+    
+}
+
+
+.langDiv {
+    
+  }
+

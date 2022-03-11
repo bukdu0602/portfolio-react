@@ -5,11 +5,12 @@ let projects = [
   {
     id: 1,
     title: "TypeBible",
-    imgName: "typeBible",
+    imgName: ["typeBible0", "typeBible1", "typeBible2", "typeBible3"],
     dateCreated: "2021-April",
     description:
       "This website let you type the bible, Sign up to save the progress, and also view the typing speed this website is made with vanila javascript and Passport for Authentication",
     websiteURL: "https://bibible.herokuapp.com/",
+    Github: "https://github.com/bukdu0602/Bible-Typing",
     Languages: [
       "Html",
       "Javascript",
@@ -20,36 +21,40 @@ let projects = [
       "Passport",
       "Heroku",
       "EJS",
+      "Bootstrap",
     ],
   },
   {
     id: 2,
     title: "MovieApp",
-    imgName: "movieApp",
+    imgName: ["movieApp0", "movieApp1"],
     dateCreated: "2021-December",
     description:
       "Check popular, top rated, now playing, upcoming movies, This website is made with React and TMDB api",
     websiteURL: "https://movieappreactssd.herokuapp.com/",
+    Github: "https://github.com/bukdu0602/movieapp-react-forHeroku",
     Languages: ["React", "CSS", "Redux", "TMDB api", "Heroku", "EJS"],
   },
   {
     id: 3,
     title: "MovieAppAngular",
-    imgName: "angularMovieApp",
+    imgName: ["angularMovieApp0"],
     dateCreated: "2022-January",
     description:
       "Check movies by genres, This website is made with Angular and TMDB api",
     websiteURL: "",
+    Github: "https://github.com/bukdu0602/angular-movie-app",
     Languages: ["Angular", "SASS", "TMDB api", "Passport", "Heroku", "EJS"],
   },
   {
     id: 4,
     title: "Outstagram",
-    imgName: "outstagram",
+    imgName: ["outstagram0"],
     dateCreated: "2022-February",
     description:
       "Similar to Instagram, this website saves and loads images. The Backend is configured with AWS Serverless",
-    websiteURL: "",
+    websiteURL: "https://github.com/bukdu0602/AWS-serverless",
+    Github: "https://github.com/bukdu0602/angular-movie-app",
     Languages: [
       "React",
       "SASS",
@@ -66,7 +71,7 @@ function Projects() {
 
   function mouseOn(id) {
     for (let i = 0; i < projects.length; i++) {
-      if (id == projects[i].id) {
+      if (id === projects[i].id) {
         setMouseOver(projects[i].Languages);
       }
     }
@@ -85,11 +90,28 @@ function Projects() {
               onMouseLeave={() => setMouseOver("")}
             >
               <h3>{item.title}</h3>
-              {item.websiteURL && (
+              {/* {item.websiteURL && (
                 <button type="button" className="btn btn-outline-success">
                   Go To the App!!
                 </button>
-              )}
+              )} */}
+
+              <div className="prjImgDiv">
+                <img
+                  src={require(`./images/projects/${item.imgName[0]}.png`)}
+                  alt=""
+                />{" "}
+                {mouseOver && (
+                  <Link to="/projectdetail" state={item}>
+                    <div className="projectBoard">
+                      <h4>Technologies:</h4>
+                      {mouseOver.map((item) => (
+                        <span key={item}> {item} </span>
+                      ))}
+                    </div>
+                  </Link>
+                )}
+              </div>
               <Link
                 type="button"
                 className="btn btn-outline-success"
@@ -98,24 +120,10 @@ function Projects() {
               >
                 Detail Page
               </Link>
-              <div className="prjImgDiv">
-                <img
-                  src={require(`./images/projects/${item.imgName}0.png`)}
-                  alt=""
-                />
-                {mouseOver && (
-                  <div className="projectBoard">
-                    <h4>Technologies:</h4>
-                    {mouseOver.map((item) => (
-                      <p key={item}>{item} </p>
-                    ))}
-                  </div>
-                )}
-              </div>
-              <p>
+              {/* <p>
                 Date Created: {item.dateCreated} <br />
                 Description: {item.description}
-              </p>
+              </p> */}
             </div>
           ))}
         </div>
