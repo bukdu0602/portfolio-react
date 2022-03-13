@@ -53,8 +53,8 @@ let projects = [
     dateCreated: "2022-February",
     description:
       "Similar to Instagram, this website saves and loads images. The Backend is configured with AWS Serverless",
-    websiteURL: "https://github.com/bukdu0602/AWS-serverless",
-    Github: "https://github.com/bukdu0602/angular-movie-app",
+    websiteURL: "",
+    Github: "https://github.com/bukdu0602/AWS-serverless",
     Languages: [
       "React",
       "SASS",

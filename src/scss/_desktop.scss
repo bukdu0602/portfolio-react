@@ -1,0 +1,36 @@
+@use './variables.scss' as *;
+
+// grid layout setup
+@media only screen and (min-width: 900px) {
+    /* For desktop: */
+    .App {
+    
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        // grid-template-rows: 100px 50px minmax(200px, auto) 60px;
+        
+        grid-template-areas: "leftPane header"
+                             "leftPane   nav"
+                             "leftPane  home"
+                             "footer    footer";
+    
+}
+
+.leftPane {
+    grid-area: leftPane;
+}
+.header {
+    grid-area: header;
+}
+.navvv {
+    grid-area: nav;
+}
+.home {
+    grid-area: home;
+}
+.footer {
+    grid-area: footer;
+}
+    
+
+  }

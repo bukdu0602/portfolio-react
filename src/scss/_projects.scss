@@ -21,8 +21,7 @@
     }
 
     .projectEntire{
-        max-width: 600px;
-        margin: auto;
+        margin: 30px;
         
         .projectCards{
             padding: 20px;
@@ -53,16 +52,26 @@
                 margin: 0;
                 visibility: hidden;
                 transition: transform .2s; /* Animation */
-
             }
-            
         }
         .prjImgDiv:hover  .projectBoard{
             // transition: transform .8s; /* Animation */
 
             visibility: visible;
         }
-        
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    
+    .CardsDiv{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .projectCards{
+        max-width: 350px;
     }
     
 

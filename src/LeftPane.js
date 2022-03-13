@@ -9,7 +9,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 function LeftPane() {
   return (
     <div className="leftPane">
-      <h1>Ryan Lim</h1>
+      <h2>Ryan Lim</h2>
       <img src={headshot} alt="Ryan" />
       <p>
         Hi My name is Ryan Lim, and I am a Junior software developer. Welcome to
@@ -42,6 +42,7 @@ function LeftPane() {
           ></FontAwesomeIcon>
         </a>
       </div>
+      <hr />
     </div>
   );
 }

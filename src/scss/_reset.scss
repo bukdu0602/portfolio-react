@@ -32,33 +32,3 @@ body {
 }
 
 
-// grid layout setup
-// .App {
-    
-//         display: grid;
-//         grid-template-columns: 1fr 5fr;
-//         // grid-template-rows: 100px 50px minmax(200px, auto) 60px;
-//         column-gap: 20px;
-//         row-gap: 10px;
-//         grid-template-areas: "leftPane header"
-//                              "leftPane   nav"
-//                              "leftPane  home"
-//                              "footer    footer";
-    
-// }
-
-// .leftPane {
-//     grid-area: leftPane;
-// }
-// .header {
-//     grid-area: header;
-// }
-// .navvv {
-//     grid-area: nav;
-// }
-// .home {
-//     grid-area: home;
-// }
-// .footer {
-//     grid-area: footer;
-// }

@@ -5,25 +5,27 @@ import { Carousel } from "react-responsive-carousel";
 function ProjectDetail() {
   const location = useLocation();
   const props = location.state;
-  console.log(props);
   return (
     <div className="projectDetail">
       <h1>{props.title}</h1>
 
       <Carousel>
         {props.imgName.map((item) => (
-          <div>
+          <div key={item.id}>
             <img src={require(`./images/projects/${item}.png`)} alt="" />
           </div>
         ))}
       </Carousel>
-      <a
-        type="button"
-        className="btn btn-outline-success"
-        href={props.websiteURL}
-      >
-        Visit Live Site
-      </a>
+      {props.websiteURL && (
+        <a
+          type="button"
+          className="btn btn-outline-success"
+          href={props.websiteURL}
+        >
+          Visit Live Site
+        </a>
+      )}
+
       <a type="button" className="btn btn-outline-success" href={props.Github}>
         Visit Github Page
       </a>
