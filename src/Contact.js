@@ -14,13 +14,14 @@ function Contact() {
         "default_service",
         "template_ozff3ci",
         form.current,
-        "oQZ9mzIPwnOTDDwdX"
+        process.env.REACT_APP_EMAILJS_KEY
       )
       .then(
         (result) => {
           alert("The message has been sent successfully.");
         },
         (error) => {
+          alert("Error sending the message");
           alert(error.text);
         }
       );
