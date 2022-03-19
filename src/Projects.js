@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 let projects = [
@@ -68,7 +68,22 @@ let projects = [
 
 function Projects() {
   const [mouseOver, setMouseOver] = useState("");
-
+  const [color, setColor] = useState("");
+  const [color2, setColor2] = useState("");
+  useEffect(() => {
+    const color = localStorage.getItem("color");
+    if (color === "default") {
+      setColor("");
+      setColor2("");
+    } else if (color === "dark") {
+      setColor("white");
+      setColor2("#1D1B1C");
+    } else if (color === "pink") {
+      setColor("pink");
+    } else if (color === "blue") {
+      setColor("lightblue");
+    }
+  }, []);
   function mouseOn(id) {
     for (let i = 0; i < projects.length; i++) {
       if (id === projects[i].id) {
@@ -85,11 +100,12 @@ function Projects() {
           {projects.map((item) => (
             <div
               className="projectCards"
+              style={{ borderColor: color }}
               key={item.id}
               onMouseEnter={() => mouseOn(item.id)}
               onMouseLeave={() => setMouseOver("")}
             >
-              <h3>{item.title}</h3>
+              <h3 style={{ color: color }}>{item.title}</h3>
               {/* {item.websiteURL && (
                 <button type="button" className="btn btn-outline-success">
                   Go To the App!!
@@ -113,6 +129,7 @@ function Projects() {
                 )}
               </div>
               <Link
+                style={{ color: color2, backgroundColor: color }}
                 type="button"
                 className="btn btn-outline-success"
                 to="/projectdetail"

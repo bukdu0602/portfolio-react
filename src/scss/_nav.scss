@@ -7,14 +7,20 @@
         justify-content: space-around;
     }
     a {
-        color: white;
+        color: $text-color-light;
         font-size: 1.3em;
         text-decoration: none;
         font-weight: bold;
+        width: 100%;
+        text-align: center;
     }
    
     a:hover {
-        background-color: #6bc79c;
+        opacity: 0.5;
         color: white;
+        
     }
+    a:visited{
+        color:white;
+        }
 }

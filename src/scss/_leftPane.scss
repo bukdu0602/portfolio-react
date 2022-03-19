@@ -5,7 +5,7 @@
     padding: 10px;
     h2 {
         text-align: center;
-        color: white;
+        color: $text-color-light;
         margin: 30px;
         font-weight: bold;
         ;
@@ -20,13 +20,23 @@
     }
     p {
         text-align: center;
-        color: white;
+        color: $text-color-light;
         margin: 30px;
     }
     hr{
         visibility: hidden;
     }
-
+    .theme{
+        // display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        opacity: 0.5;
+    }
+    .theme:hover{
+        opacity: 1;
+    }
 } 
 
 .socialMedia {
@@ -37,11 +47,12 @@
     }
     .ftawIcons{
     margin: 15px;
-    background: white;
+    background: $text-color-light;
     color: $brand-color;
     border-radius: 50%;
     padding: 10px;
     }
+    
 }
 
 
@@ -57,6 +68,14 @@
         hr{
             visibility: visible;
         }
+    }
+    .theme{
+        position: static !important;
+        color: $text-color-light;
+        width: 100px;
+        margin: 100px auto;
+        line-height: 2;
+        opacity: 1 !important;
     }
     
 

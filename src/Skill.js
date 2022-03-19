@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faStar,
@@ -26,23 +27,41 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Skill = () => {
+  const [color, setColor] = useState("");
+
+  useEffect(() => {
+    const color = localStorage.getItem("color");
+    if (color === "default") {
+      setColor("");
+    } else if (color === "dark") {
+      setColor("white");
+    } else if (color === "pink") {
+      setColor("pink");
+    } else if (color === "blue") {
+      setColor("lightblue");
+    }
+  }, []);
   return (
     <div className="languagesWrapper">
-      <div className="languageTitle">
-        <FontAwesomeIcon icon={faScrewdriverWrench} className="pipeV" />
-        <span> Skills</span>
+      <div className="languageTitle" style={{ color: color }}>
+        <FontAwesomeIcon
+          style={{ color: color }}
+          icon={faScrewdriverWrench}
+          className="pipeV"
+        />
+        <span style={{ color: color }}> Skills</span>
       </div>
       <div className="languageCards">
         <div className="languageCard">
           <div className="webDev">
-            <h3>Front-end Web</h3>
+            <h3 style={{ color: color }}>Front-end Web</h3>
             <div className="iconsAndStars">
-              <div className="iconsDiv">
+              <div className="iconsDiv" style={{ color: color }}>
                 <FontAwesomeIcon
                   style={{ color: "red" }}
                   icon={faHtml5}
                 ></FontAwesomeIcon>
-                <span> HTML</span> <br />
+                <span style={{ color: color }}> HTML</span> <br />
                 <FontAwesomeIcon
                   icon={faCss3}
                   style={{ color: "red" }}
@@ -51,26 +70,26 @@ const Skill = () => {
                   icon={faSass}
                   style={{ color: "pink" }}
                 ></FontAwesomeIcon>
-                <span> CSS&SASS</span> <br />
+                <span style={{ color: color }}> CSS&SASS</span> <br />
                 <FontAwesomeIcon
                   icon={faJs}
                   style={{ color: "yellow", backgroundColor: "black" }}
                 ></FontAwesomeIcon>
-                <span> JavaScript</span> <br />
+                <span style={{ color: color }}> JavaScript</span> <br />
                 <FontAwesomeIcon
                   icon={faReact}
                   style={{ color: "lightblue" }}
                 ></FontAwesomeIcon>
-                <span> React</span>
+                <span style={{ color: color }}> React</span>
                 <br />
                 <FontAwesomeIcon icon={faVuejs}></FontAwesomeIcon>
-                <span> VueJS</span>
+                <span style={{ color: color }}> VueJS</span>
                 <br />
                 <FontAwesomeIcon
                   icon={faAngular}
                   style={{ color: "red" }}
                 ></FontAwesomeIcon>
-                <span> Angular</span>
+                <span style={{ color: color }}> Angular</span>
                 <br />
               </div>
               <div className="starsDiv">
@@ -194,31 +213,31 @@ const Skill = () => {
 
         <div className="languageCard">
           <div className="webDev">
-            <h3>Back-end</h3>
+            <h3 style={{ color: color }}>Back-end</h3>
             <div className="iconsAndStars">
               <div className="iconsDiv">
                 <FontAwesomeIcon
                   icon={faNodeJs}
                   style={{ color: "green" }}
                 ></FontAwesomeIcon>
-                <span> Node.Js</span> <br />
+                <span style={{ color: color }}> Node.Js</span> <br />
                 <FontAwesomeIcon
                   icon={faMicrosoft}
                   style={{ color: "lightblue" }}
                 ></FontAwesomeIcon>
-                <span> .net</span>
+                <span style={{ color: color }}> .net</span>
                 <br />
                 <FontAwesomeIcon
                   icon={faAws}
                   style={{ color: "orange" }}
                 ></FontAwesomeIcon>
-                <span> AWS Serverless</span>
+                <span style={{ color: color }}> AWS Serverless</span>
                 <br />
                 <FontAwesomeIcon
                   icon={faDatabase}
                   style={{ color: "black" }}
                 ></FontAwesomeIcon>
-                <span> RDS(SQL)</span>
+                <span style={{ color: color }}> RDS(SQL)</span>
                 <br />
               </div>
               <div className="starsDiv">
@@ -300,7 +319,7 @@ const Skill = () => {
         </div>
         <div className="languageCard">
           <div className="webDev">
-            <h3>Mobile</h3>
+            <h3 style={{ color: color }}>Mobile</h3>
             <div className="iconsAndStars">
               <div className="iconsDiv">
                 <FontAwesomeIcon
@@ -308,18 +327,18 @@ const Skill = () => {
                   icon={faSwift}
                   style={{ color: "red" }}
                 ></FontAwesomeIcon>
-                <span> Swift</span> <br />
+                <span style={{ color: color }}> Swift</span> <br />
                 <FontAwesomeIcon
                   name="react"
                   icon={faAndroid}
                 ></FontAwesomeIcon>
-                <span> Kotlin</span>
+                <span style={{ color: color }}> Kotlin</span>
                 <br />
                 <FontAwesomeIcon
                   icon={faReact}
                   style={{ color: "lightblue" }}
                 ></FontAwesomeIcon>
-                <span> React Native</span>
+                <span style={{ color: color }}> React Native</span>
                 <br />
               </div>
               <div className="starsDiv">
@@ -380,7 +399,7 @@ const Skill = () => {
         </div>
         <div className="languageCard">
           <div className="webDev">
-            <h3>Others</h3>
+            <h3 style={{ color: color }}>Others</h3>
             <div className="iconsAndStars">
               <div className="iconsDiv">
                 <FontAwesomeIcon
@@ -388,25 +407,25 @@ const Skill = () => {
                   icon={faPython}
                   style={{ color: "blue" }}
                 ></FontAwesomeIcon>
-                <span> Python</span> <br />
+                <span style={{ color: color }}> Python</span> <br />
                 <FontAwesomeIcon
                   name="react"
                   icon={faPhp}
                   style={{ color: "black", background: "#7377AD" }}
                 ></FontAwesomeIcon>
-                <span> PHP & Laravel</span>
+                <span style={{ color: color }}> PHP & Laravel</span>
                 <br />
                 <FontAwesomeIcon
                   icon={faBootstrap}
                   style={{ color: "#6F11EF" }}
                 ></FontAwesomeIcon>
-                <span> Bootstrap</span>
+                <span style={{ color: color }}> Bootstrap</span>
                 <br />
                 <FontAwesomeIcon
                   icon={faJ}
                   style={{ color: "blue" }}
                 ></FontAwesomeIcon>
-                <span> Jquery</span>
+                <span style={{ color: color }}> Jquery</span>
                 <br />
               </div>
               <div className="starsDiv">

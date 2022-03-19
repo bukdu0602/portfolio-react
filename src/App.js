@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import About from "./About";
 import Contact from "./Contact";
@@ -13,9 +14,17 @@ import "./scss/styles.scss";
 import resume from "./resume/resume.pdf";
 
 function App() {
+  const [color, setColor] = useState("");
+
+  useEffect(() => {
+    const color = localStorage.getItem("color");
+    if (color === "dark") {
+      setColor("#323233");
+    }
+  }, []);
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App" style={{ backgroundColor: color }}>
         <LeftPane />
         <Header />
         <Nav />

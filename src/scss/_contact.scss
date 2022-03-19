@@ -34,9 +34,9 @@
     }
     .emailForm{
         background-color: $brand-color;
-        color: white;
+        color: $text-color-light;
         padding-bottom: 30px;
-        border-bottom: white solid 2px;
+        border-bottom: $bg-color-light solid 2px;
         padding: 30px;
         h4{
             margin: 20px;
@@ -46,12 +46,11 @@
         }
         textarea{
             width: 100%;
-
         }
         .emailButton{
-            background-color: white;
+            background-color: $bg-color-light;
             color: $brand-color;
-            border: white;
+            border: $bg-color-light;
             border-radius: 5px;
             max-width: 100px;
             
