@@ -27,7 +27,7 @@ let projects = [
   {
     id: 2,
     title: "MovieApp",
-    imgName: ["movieApp0", "movieApp1"],
+    imgName: ["movieApp0", "movieApp1", "movieApp2", "movieApp3"],
     dateCreated: "2021-December",
     description:
       "Check popular, top rated, now playing, upcoming movies, This website is made with React and TMDB api",
@@ -49,11 +49,12 @@ let projects = [
   {
     id: 4,
     title: "Outstagram",
-    imgName: ["outstagram0"],
+    imgName: ["outstagram0", "outstagram1", "outstagram2", "outstagram3"],
     dateCreated: "2022-February",
     description:
       "Similar to Instagram, this website saves and loads images. The Backend is configured with AWS Serverless",
-    websiteURL: "",
+    websiteURL:
+      "http://awsfinalprojectreact.s3-website-us-west-2.amazonaws.com/",
     Github: "https://github.com/bukdu0602/AWS-serverless",
     Languages: [
       "React",

@@ -3,6 +3,9 @@
 .leftPane{
     background-color: $brand-color;
     padding: 10px;
+    #homePageReDirect{
+        text-decoration: none;
+    }
     h2 {
         text-align: center;
         color: $text-color-light;

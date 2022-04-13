@@ -28,7 +28,7 @@ function ProjectDetail() {
 
       <Carousel>
         {props.imgName.map((item) => (
-          <div key={item.id}>
+          <div key={item.id} className="detailImage">
             <img src={require(`./images/projects/${item}.png`)} alt="" />
           </div>
         ))}

@@ -42,7 +42,9 @@ function LeftPane() {
 
   return (
     <div className="leftPane" style={{ backgroundColor: color }}>
-      <h2>Ryan Lim</h2>
+      <a href="/" id="homePageReDirect">
+        <h2>Ryan Lim</h2>
+      </a>
       <img src={headshot} alt="Ryan" />
       <p>
         Hi My name is Ryan Lim, and I am a Junior software developer. Welcome to
