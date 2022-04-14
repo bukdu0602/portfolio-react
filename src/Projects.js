@@ -4,6 +4,58 @@ import { Link } from "react-router-dom";
 let projects = [
   {
     id: 1,
+    title: "MovieApp",
+    imgName: ["movieApp0", "movieApp1", "movieApp2", "movieApp3"],
+    dateCreated: "2021-December",
+    description:
+      "Check popular, top rated, now playing, upcoming movies, This website is made with React and TMDB api",
+    websiteURL: "https://movieappreactssd.herokuapp.com/",
+    Github: "https://github.com/bukdu0602/movieapp-react-forHeroku",
+    Languages: ["React", "CSS", "Redux", "TMDB api", "Heroku", "EJS"],
+  },
+  {
+    id: 2,
+    title: "MovieAppAngular",
+    imgName: ["angularMovieApp0"],
+    dateCreated: "2022-January",
+    description:
+      "Check movies by genres, This website is made with Angular and TMDB api",
+    websiteURL: "",
+    Github: "https://github.com/bukdu0602/angular-movie-app",
+    Languages: ["Angular", "SASS", "TMDB api", "Passport", "Heroku", "EJS"],
+  },
+  {
+    id: 3,
+    title: "Outstagram",
+    imgName: ["outstagram0", "outstagram1", "outstagram2", "outstagram3"],
+    dateCreated: "2022-February",
+    description:
+      "Similar to Instagram, this website saves and loads images. The Backend is configured with AWS Serverless",
+    websiteURL:
+      "http://awsfinalprojectreact.s3-website-us-west-2.amazonaws.com/",
+    Github: "https://github.com/bukdu0602/AWS-serverless",
+    Languages: [
+      "React",
+      "SASS",
+      "AWS Lambda Function",
+      "AWS Cognito",
+      "AWS RDS",
+      "AWS S3",
+    ],
+  },
+  {
+    id: 4,
+    title: "Food explorer(School project)",
+    imgName: ["foodexplorer0"],
+    dateCreated: "2022-March",
+    description: "Mobile to desktop responsive-website.",
+    websiteURL:
+      "http://foodexplorerschoolprj.s3-website-us-west-2.amazonaws.com/",
+    Github: "https://github.com/bukdu0602/foodexplorer-school-prj",
+    Languages: ["React", "SASS", "AWS S3"],
+  },
+  {
+    id: 5,
     title: "TypeBible",
     imgName: ["typeBible0", "typeBible1", "typeBible2", "typeBible3"],
     dateCreated: "2021-April",
@@ -22,47 +74,6 @@ let projects = [
       "Heroku",
       "EJS",
       "Bootstrap",
-    ],
-  },
-  {
-    id: 2,
-    title: "MovieApp",
-    imgName: ["movieApp0", "movieApp1", "movieApp2", "movieApp3"],
-    dateCreated: "2021-December",
-    description:
-      "Check popular, top rated, now playing, upcoming movies, This website is made with React and TMDB api",
-    websiteURL: "https://movieappreactssd.herokuapp.com/",
-    Github: "https://github.com/bukdu0602/movieapp-react-forHeroku",
-    Languages: ["React", "CSS", "Redux", "TMDB api", "Heroku", "EJS"],
-  },
-  {
-    id: 3,
-    title: "MovieAppAngular",
-    imgName: ["angularMovieApp0"],
-    dateCreated: "2022-January",
-    description:
-      "Check movies by genres, This website is made with Angular and TMDB api",
-    websiteURL: "",
-    Github: "https://github.com/bukdu0602/angular-movie-app",
-    Languages: ["Angular", "SASS", "TMDB api", "Passport", "Heroku", "EJS"],
-  },
-  {
-    id: 4,
-    title: "Outstagram",
-    imgName: ["outstagram0", "outstagram1", "outstagram2", "outstagram3"],
-    dateCreated: "2022-February",
-    description:
-      "Similar to Instagram, this website saves and loads images. The Backend is configured with AWS Serverless",
-    websiteURL:
-      "http://awsfinalprojectreact.s3-website-us-west-2.amazonaws.com/",
-    Github: "https://github.com/bukdu0602/AWS-serverless",
-    Languages: [
-      "React",
-      "SASS",
-      "AWS Lambda Function",
-      "AWS Cognito",
-      "AWS RDS",
-      "AWS S3",
     ],
   },
 ];
